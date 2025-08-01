@@ -34,7 +34,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { DialogTitle } from '@headlessui/vue'
-import MainBtn from '../button/MainBtn.vue';
+import MainBtn from '@/components/UI/button/MainBtn.vue';
 
 const response = ref<Number>()
 </script>

@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const api = axios.create({
   baseURL: 'https://cinemaguide.skillbox.cc/',
-  withCredentials: true, // если нужны куки
+  withCredentials: false, // куки
   headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 })
 

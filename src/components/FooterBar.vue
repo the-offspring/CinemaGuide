@@ -5,8 +5,9 @@
             <div class="w-6 h-6 p-0.5 justify-center items-center flex"></div>
             <div class="text-white/70 text-lg font-normal leading-normal">Все права защищены </div>
             <div class="grow shrink basis-0 h-9 justify-end items-center gap-6 flex">
-                <div v-for="item in social"
+                <div v-for="item in social" :key="item.src"
                     class="w-9 h-9 rounded-lg border border-white/80 justify-center items-center flex">
+                    >
                     <img :src="item.src" :alt="item.placeholder" />
                 </div>
             </div>

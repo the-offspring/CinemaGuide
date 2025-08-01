@@ -1,5 +1,5 @@
-<template>
-  <header>
+<template class="flex flex-col">
+  <header class="w-full">
     <HeaderBar />
   </header>
   <main>

@@ -1,5 +1,5 @@
 <template>
-    <section id="topListMovie" class="w-full ">
+    <section id="topListMovie" class="w-full sm:overflow-x-auto">
         <h2 class="text-2xl font-bold text-white mt-10">
             Топ 10 фильмов
         </h2>

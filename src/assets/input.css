@@ -1,19 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 
-* {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    font-family: "Play";
-}
-body {
-    background-color: #000;
-    display: grid;
-    justify-content: center;
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* твои кастомные стили */
+@layer base {
+    * {
+        @apply select-none;
+        font-family: "Play", sans-serif;
+    }
+
+    body {
+        @apply bg-black grid justify-center w-min-[1440px] mx-auto overflow-hidden;
+    }
 }

@@ -1,6 +1,6 @@
 <template>
     <ul
-        class="flex w-fit tablet:w-full gap-10 tablet:justify-items-center tablet:gap-y-16 tablet:grid tablet:grid-cols-3 laptop:grid-cols-4 desktop:grid-cols-5">
+        class="flex w-fit lg:w-full gap-10 lg:justify-items-center lg:gap-y-16 lg:grid lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         <template v-if="!isLoading">
             <li v-for="card in topMovies" :key="card.id"
                 class="item relative rounded-3xl bg-cover bg-center bg-no-repeat border border-white/25"

@@ -12,7 +12,7 @@
                 {{ year }}
             </span>
             <span v-if="genre" class="text-white/70 tablet:text-lg">
-                {{ genre.reduce((acc, value) => acc + ', ' + value) }}
+                {{genre.reduce((acc, value) => acc + ', ' + value)}}
             </span>
             <span v-if="countries?.length !== 0" class="text-white/70 tablet:text-lg">
                 {{ countries }}
@@ -21,7 +21,7 @@
                 {{ formattedLength }}
             </span>
         </div>
-        <h1 :class="fontSize, magTop" class="text-white font-bold">
+        <h1 :class="[fontSize, magTop, 'text-white font-bold']">
             {{ title }}
         </h1>
         <p v-if="subtitle" class="text-white/70 text-lg mt-4">
@@ -50,19 +50,20 @@ const props = defineProps<{
 
 const formattedLength = computed(() => {
     if (props.length) {
-
         return props.length <= 60
             ? `${props.length} м`
             : `${Math.floor(props.length / 60)} ч ${props.length % 60} м`;
     }
+    return '';
 });
 const ratingBgClass = computed(() => {
-    if (props.rating) {
+    if (props.rating !== undefined && props.rating !== null) {
         if (props.rating >= 10) return 'bg-yellow-500'; // золотой цвет
         if (props.rating >= 7) return 'bg-green-500'; // зеленый цвет
         if (props.rating >= 5) return 'bg-gray-500'; // серый цвет
         return 'bg-red-500'; // красный цвет
     }
+    return 'bg-gray-500'; // default color if rating is not provided
 });
 
 </script>

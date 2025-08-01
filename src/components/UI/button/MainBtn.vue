@@ -1,7 +1,7 @@
 <template>
-    <button class="py-4 text-white rounded-3xl flex items-center justify-center gap-2" :class="styleColor, propStyl">
-        <slot :class="slotStyle, 'text-inherit hover:text-inherit'" />
-        {{ Text }}
+    <button class="py-4 text-white rounded-3xl flex items-center justify-center gap-2" :class="[styleColor, propStyl]">
+        <slot :class="[slotStyle, 'text-inherit hover:text-inherit']" />
+        {{ Text ? Text : '' }}
     </button>
 </template>
 

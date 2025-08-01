@@ -8,6 +8,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'home', component: HomeView },
+
     {
       path: '/genres',
       name: 'genres',
@@ -25,8 +26,9 @@ const router = createRouter({
       path: '/movie/:id/:name',
       name: 'movie-details',
       component: MovieDetailsView,
-      props: true // This will pass route params as props to the component
+      props: true
     }
+
     // {
     //   path: '/profile',
     //   name: 'profile',
@@ -38,7 +40,7 @@ const router = createRouter({
     //   path: '/:pathMatch(.*)*',
     //   name: 'not-found',
     //   component: () => import('../views/NotFoundView.vue')
-    // }
+    // },
   ]
 })
 router.beforeEach((to, from, next) => {
